@@ -13,7 +13,7 @@ use Ref::Util qw/ is_plain_arrayref is_plain_hashref /;
 use Plack::Util;
 use Plack::Util::Accessor qw( rules handler );
 
-our $VERSION = 'v0.1.0';
+our $VERSION = 'v0.2.0';
 
 sub prepare_app {
     my ($self) = @_;
