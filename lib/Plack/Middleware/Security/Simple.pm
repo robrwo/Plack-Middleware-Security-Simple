@@ -86,11 +86,11 @@ sub prepare_app {
             sub {
                 my ($env) = @_;
                 if ( my $logger = $env->{'psgix.logger'} ) {
-                    $logger->(
+                    $logger->({
                         level   => "warn",
                         message => __PACKAGE__
                           . " Blocked $env->{REMOTE_ADDR} $env->{REQUEST_URI}"
-                    );
+                    });
                 }
                 return HTTP::Exception->throw(HTTP_BAD_REQUEST);
             }

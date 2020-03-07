@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Bug Fixes]
+  - Fixed call to logger.
+
   [Documentation]
   - Documented using a coderef for rules.
 
