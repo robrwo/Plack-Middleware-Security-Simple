@@ -4,7 +4,7 @@ Plack::Middleware::Security::Simple - A simple security filter for Plack
 
 # VERSION
 
-version v0.2.1
+version v0.2.2
 
 # SYNOPSIS
 
@@ -12,8 +12,6 @@ version v0.2.1
 use Plack::Builder;
 
 builder {
-
-  enable "HTTPExceptions", rethrow => 1;
 
   enable "Security::Simple",
       rules => [
@@ -54,7 +52,7 @@ It takes the Plack environment as an argument, and returns a
 [Plack::Middleware::HTTPExceptions](https://metacpan.org/pod/Plack::Middleware::HTTPExceptions).
 
 The default handler will log a warning to the `psgix.logger`, and
-throw a [HTTP::Exception](https://metacpan.org/pod/HTTP::Exception) for HTTP 400 (Bad Request).
+return a HTTP 400 (Bad Request) response.
 
 # SEE ALSO
 

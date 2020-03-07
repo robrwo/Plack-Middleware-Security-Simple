@@ -28,8 +28,6 @@ my $handler = builder {
 
     enable "LogDispatch", logger => $log;
 
-    enable "HTTPExceptions", rethrow => 1;
-
     enable "Security::Simple",
         rules => [
             PATH_INFO => qr{\.(php|asp)$},

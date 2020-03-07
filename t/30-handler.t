@@ -5,6 +5,7 @@ use warnings;
 
 use Test::More;
 
+use HTTP::Exception;
 use HTTP::Status qw/ :constants :is /;
 use HTTP::Request::Common;
 use Plack::Builder;
@@ -16,8 +17,7 @@ my $handler = builder {
 
     enable "Security::Simple",
         handler => sub {
-            my $res = Plack::Response->new(HTTP_NOT_FOUND, [ 'Content-Type' => 'text/plain' ], [ "Nope" ] );
-            return $res->finalize;
+            return HTTP::Exception->throw(HTTP_NOT_FOUND);
         },
         rules => [
             PATH_INFO => qr{\.(php|asp)$},

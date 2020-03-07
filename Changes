@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Enhancements]
+  - HTTP::Exception is no longer a run-time prerequisite.
+
   [Tests]
   - Simplified code in tests.
 

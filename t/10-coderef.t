@@ -11,8 +11,6 @@ use Plack::Builder;
 use Plack::Test;
 
 my $handler = builder {
-    enable "HTTPExceptions", rethrow => 1;
-
     enable "Security::Simple",
         rules => sub {
             my ($env) = @_;

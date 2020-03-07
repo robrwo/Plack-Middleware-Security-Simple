@@ -10,10 +10,10 @@ use warnings;
 use parent qw( Plack::Middleware );
 
 use Hash::Match;
-use HTTP::Exception;
 use HTTP::Status qw( HTTP_BAD_REQUEST );
 use Ref::Util qw/ is_plain_arrayref is_plain_hashref /;
 
+use Plack::Response;
 use Plack::Util;
 use Plack::Util::Accessor qw( rules handler );
 
@@ -27,8 +27,6 @@ our $VERSION = 'v0.2.2';
   use Plack::Builder;
 
   builder {
-
-    enable "HTTPExceptions", rethrow => 1;
 
     enable "Security::Simple",
         rules => [
@@ -66,7 +64,7 @@ L<Plack::Response>, or throws an exception for
 L<Plack::Middleware::HTTPExceptions>.
 
 The default handler will log a warning to the C<psgix.logger>, and
-throw a L<HTTP::Exception> for HTTP 400 (Bad Request).
+return a HTTP 400 (Bad Request) response.
 
 =cut
 
@@ -92,7 +90,9 @@ sub prepare_app {
                           . " Blocked $env->{REMOTE_ADDR} $env->{REQUEST_URI}"
                     });
                 }
-                return HTTP::Exception->throw(HTTP_BAD_REQUEST);
+            my $res = Plack::Response->new(HTTP_BAD_REQUEST, [ 'Content-Type' => 'text/plain' ], [ "Bad Request" ] );
+                return $res->finalize;
+
             }
         );
     }

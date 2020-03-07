@@ -22,8 +22,6 @@ my $rules = Hash::Match->new(
 );
 
 my $handler = builder {
-    enable "HTTPExceptions", rethrow => 1;
-
     enable "Security::Simple",
         rules => $rules;
 
