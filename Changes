@@ -1,6 +1,11 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Documentation]
+  - Documented using a coderef for rules.
+
+  [Tests]
+  - Added test of coderef for rules.
 
 v0.2.0    2020-03-07 00:13:56+00:00 Europe/London
  - This is the first, publicly-released version.

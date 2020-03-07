@@ -48,9 +48,13 @@ scripts.
 
 =attr rules
 
-This is a set of rules. It should be an array-reference or
+This is a set of rules. It can be a an array-reference or
 L<Hash::Match> object containing matches against keys in the Plack
 environment.
+
+It can also be a code reference for a subroutine that takes the Plack
+environment as an argument and returns a true value if there is a
+match.
 
 =attr handler
 
