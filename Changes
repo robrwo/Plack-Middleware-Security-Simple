@@ -7,6 +7,8 @@ Revision history for {{$dist->name}}:
   [Tests]
   - Simplified code in tests.
 
+  - Specified a minimum version of Log::Dispatch used for tests.
+
 v0.2.1    2020-03-07 10:23:06+00:00 Europe/London
   [Bug Fixes]
   - Fixed call to logger.

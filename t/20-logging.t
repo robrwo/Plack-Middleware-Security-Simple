@@ -7,7 +7,7 @@ use Test::More;
 
 use HTTP::Status qw/ :constants :is /;
 use HTTP::Request::Common;
-use Log::Dispatch;
+use Log::Dispatch 2.68;
 use Log::Dispatch::Array;
 use Plack::Builder;
 use Plack::Test;
