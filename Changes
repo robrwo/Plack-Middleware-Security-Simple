@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Tests]
+  - Simplified code in tests.
 
 v0.2.1    2020-03-07 10:23:06+00:00 Europe/London
   [Bug Fixes]

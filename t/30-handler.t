@@ -16,9 +16,7 @@ my $handler = builder {
 
     enable "Security::Simple",
         handler => sub {
-            my $res = Plack::Response->new(HTTP_NOT_FOUND);
-            $res->content_type('text/plain');
-            $res->body('Nope');
+            my $res = Plack::Response->new(HTTP_NOT_FOUND, [ 'Content-Type' => 'text/plain' ], [ "Nope" ] );
             return $res->finalize;
         },
         rules => [
