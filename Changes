@@ -4,6 +4,11 @@ Revision history for {{$dist->name}}:
   [Enhancements]
   - HTTP::Exception is no longer a run-time prerequisite.
 
+  [Bug Fixes]
+  - Set minimum Perl to v5.10, since that is the minimum used by some
+    of the prerequisites.
+
+
   [Tests]
   - Simplified code in tests.
 

@@ -2,7 +2,7 @@ package Plack::Middleware::Security::Simple;
 
 # ABSTRACT: A simple security filter for Plack
 
-use v5.8.0;
+use v5.10.0;
 
 use strict;
 use warnings;

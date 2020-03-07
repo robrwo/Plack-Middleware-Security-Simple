@@ -9,7 +9,7 @@ requires "Plack::Util" => "0";
 requires "Plack::Util::Accessor" => "0";
 requires "Ref::Util" => "0";
 requires "parent" => "0";
-requires "perl" => "v5.8.0";
+requires "perl" => "v5.10.0";
 recommends "Ref::Util::XS" => "0";
 
 on 'test' => sub {
