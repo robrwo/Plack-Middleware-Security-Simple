@@ -16,8 +16,11 @@ recommends "Ref::Util::XS" => "0";
 on 'test' => sub {
   requires "File::Spec" => "0";
   requires "HTTP::Request::Common" => "0";
+  requires "Log::Dispatch" => "0";
+  requires "Log::Dispatch::Array" => "0";
   requires "Module::Metadata" => "0";
   requires "Plack::Builder" => "0";
+  requires "Plack::Response" => "0";
   requires "Plack::Test" => "0";
   requires "Test::More" => "0";
 };
