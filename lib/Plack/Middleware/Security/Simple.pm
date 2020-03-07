@@ -32,8 +32,9 @@ our $VERSION = 'v0.2.1';
 
     enable "Security::Simple",
         rules => [
-            PATH_INFO => qr{^/cgi-bin/},
-            PATH_INFO => qr{\.(php|asp)$},
+            PATH_INFO       => qr{^/cgi-bin/},
+            PATH_INFO       => qr{\.(php|asp)$},
+            HTTP_USER_AGENT => qr{BadRobot},
         ];
 
    ...

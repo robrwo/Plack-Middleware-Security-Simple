@@ -4,6 +4,8 @@ Revision history for {{$dist->name}}:
   [Documentation]
   - Documented using a coderef for rules.
 
+  - Added example of user agent check to SYNOPSIS.
+
   [Tests]
   - Added test of coderef for rules.
 
