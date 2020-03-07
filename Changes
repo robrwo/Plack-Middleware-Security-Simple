@@ -1,0 +1,4 @@
+Revision history for {{$dist->name}}:
+
+{{$NEXT}}
+ - This is the first, publicly-released version.
