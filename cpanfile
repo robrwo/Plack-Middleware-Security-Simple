@@ -5,7 +5,6 @@ requires "HTTP::Status" => "0";
 requires "Hash::Match" => "0";
 requires "Plack::Middleware" => "0";
 requires "Plack::Response" => "0";
-requires "Plack::Util" => "0";
 requires "Plack::Util::Accessor" => "0";
 requires "Ref::Util" => "0";
 requires "parent" => "0";

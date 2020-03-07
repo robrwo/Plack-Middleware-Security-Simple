@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Bug Fixes]
+  - Removed unused import of Plack::Util.
 
 v0.3.0    2020-03-07 19:48:36+00:00 Europe/London
   [Enhancements]

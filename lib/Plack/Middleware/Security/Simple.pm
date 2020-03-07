@@ -14,7 +14,6 @@ use HTTP::Status qw( HTTP_BAD_REQUEST );
 use Ref::Util qw/ is_plain_arrayref is_plain_hashref /;
 
 use Plack::Response;
-use Plack::Util;
 use Plack::Util::Accessor qw( rules handler );
 
 # RECOMMEND PREREQ: Ref::Util::XS
