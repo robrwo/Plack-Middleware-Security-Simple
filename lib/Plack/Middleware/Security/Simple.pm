@@ -19,7 +19,7 @@ use Plack::Util::Accessor qw( rules handler );
 
 # RECOMMEND PREREQ: Ref::Util::XS
 
-our $VERSION = 'v0.2.2';
+our $VERSION = 'v0.3.0';
 
 =head1 SYNOPSIS
 
