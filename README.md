@@ -17,8 +17,9 @@ builder {
 
   enable "Security::Simple",
       rules => [
-          PATH_INFO => qr{^/cgi-bin/},
-          PATH_INFO => qr{\.(php|asp)$},
+          PATH_INFO       => qr{^/cgi-bin/},
+          PATH_INFO       => qr{\.(php|asp)$},
+          HTTP_USER_AGENT => qr{BadRobot},
       ];
 
  ...
@@ -36,9 +37,13 @@ scripts.
 
 ## rules
 
-This is a set of rules. It should be an array-reference or
+This is a set of rules. It can be a an array-reference or
 [Hash::Match](https://metacpan.org/pod/Hash::Match) object containing matches against keys in the Plack
 environment.
+
+It can also be a code reference for a subroutine that takes the Plack
+environment as an argument and returns a true value if there is a
+match.
 
 ## handler
 
