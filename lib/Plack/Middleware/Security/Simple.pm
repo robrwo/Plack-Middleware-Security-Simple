@@ -18,7 +18,6 @@ use Plack::Util;
 use Plack::Util::Accessor qw( rules handler );
 
 # RECOMMEND PREREQ: Ref::Util::XS
-# RECOMMEND PREREQ: Plack::Middleware::HTTPExceptions
 
 our $VERSION = 'v0.2.2';
 
