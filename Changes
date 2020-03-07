@@ -14,5 +14,7 @@ Revision history for {{$dist->name}}:
 
   - Added test of logging.
 
+  - Added test of custom handler.
+
 v0.2.0    2020-03-07 00:13:56+00:00 Europe/London
  - This is the first, publicly-released version.
