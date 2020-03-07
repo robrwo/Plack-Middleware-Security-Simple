@@ -12,5 +12,7 @@ Revision history for {{$dist->name}}:
   [Tests]
   - Added test of coderef for rules.
 
+  - Added test of logging.
+
 v0.2.0    2020-03-07 00:13:56+00:00 Europe/London
  - This is the first, publicly-released version.
