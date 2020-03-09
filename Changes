@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Enhancements]
+  - Added Plack::Middleware::Security::Common with some common
+    filtering rules.
 
 v0.3.1    2020-03-09 08:35:06+00:00 Europe/London
   [Bug Fixes]
