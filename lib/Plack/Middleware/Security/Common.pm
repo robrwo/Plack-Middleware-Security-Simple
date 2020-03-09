@@ -14,6 +14,7 @@ our @EXPORT = qw(
    misc_extensions
    non_printable_chars
    null_or_escape
+   require_content
    script_extensions
    system_dirs
    unexpected_content
@@ -138,6 +139,21 @@ sub null_or_escape {
     return (
         REQUEST_URI  => $re,
     )
+}
+
+=export require_content
+
+This blocks POST or PUT requests with no content.
+
+=cut
+
+sub require_content {
+    return (
+        -and => [
+             REQUEST_METHOD => qr{^(?:POST|PUT)$},
+             CONTENT_LENGTH => sub { !$_[0] },
+        ],
+    );
 }
 
 =export script_extensions
