@@ -188,7 +188,7 @@ sub unexpected_content {
     return (
         -and => [
              REQUEST_METHOD => qr{^(?:GET|HEAD|CONNECT|OPTIONS|TRACE)$},
-             CONTENT_LENGTH => sub { $_[0] > 0 },
+             CONTENT_LENGTH => sub { !!$_[0] },
         ],
     );
 }
