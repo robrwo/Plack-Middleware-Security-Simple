@@ -43,6 +43,8 @@ It can also be a code reference for a subroutine that takes the Plack
 environment as an argument and returns a true value if there is a
 match.
 
+See [Plack::Middleware::Security::Common](https://metacpan.org/pod/Plack::Middleware::Security::Common) for a set of common rules.
+
 ## handler
 
 This is a function that is called when a match is found.
