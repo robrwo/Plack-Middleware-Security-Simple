@@ -102,7 +102,6 @@ sub call {
     if (my $rules = $self->rules) {
         return $self->handler()->( $env ) if $rules->($env);
     }
-
     return $self->app->($env);
 }
 
