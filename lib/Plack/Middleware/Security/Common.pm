@@ -145,6 +145,8 @@ sub null_or_escape {
 
 This blocks POST or PUT requests with no content.
 
+This was added in v0.4.1.
+
 =cut
 
 sub require_content {
