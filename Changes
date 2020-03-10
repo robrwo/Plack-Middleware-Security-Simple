@@ -10,6 +10,8 @@ Revision history for {{$dist->name}}:
 
   - Updated rule: dot_files to include "../" in path or query string.
 
+  - The HTTP status can be overridden without overriding the handler.
+
   [Documentation]
   - Fixed POD formatting.
 

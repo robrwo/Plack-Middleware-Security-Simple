@@ -14,7 +14,7 @@ use HTTP::Status qw( HTTP_BAD_REQUEST );
 use Ref::Util qw/ is_plain_arrayref is_plain_hashref /;
 
 use Plack::Response;
-use Plack::Util::Accessor qw( rules handler );
+use Plack::Util::Accessor qw( rules handler status );
 
 # RECOMMEND PREREQ: Ref::Util::XS
 
@@ -66,6 +66,11 @@ L<Plack::Middleware::HTTPExceptions>.
 The default handler will log a warning to the C<psgix.logger>, and
 return a HTTP 400 (Bad Request) response.
 
+=attr status
+
+This is the HTTP status code that the default L</handler> will return
+when a resource is blocked.  It defaults to 400 (Bad Request).
+
 =cut
 
 sub prepare_app {
@@ -79,6 +84,10 @@ sub prepare_app {
 
     }
 
+    unless ( $self->status ) {
+        $self->status( HTTP_BAD_REQUEST );
+    }
+
     unless ( $self->handler ) {
         $self->handler(
             sub {
@@ -90,7 +99,7 @@ sub prepare_app {
                           . " Blocked $env->{REMOTE_ADDR} $env->{REQUEST_URI}"
                     });
                 }
-            my $res = Plack::Response->new(HTTP_BAD_REQUEST, [ 'Content-Type' => 'text/plain' ], [ "Bad Request" ] );
+            my $res = Plack::Response->new($self->status, [ 'Content-Type' => 'text/plain' ], [ "Bad Request" ] );
                 return $res->finalize;
 
             }
