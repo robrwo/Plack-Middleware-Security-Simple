@@ -8,6 +8,9 @@ Revision history for {{$dist->name}}:
 
   - Updated rule: cgi_bin to incldue cgi_wrapper.
 
+  [Documentation]
+  - Fixed POD formatting.
+
 v0.4.0    2020-03-09 17:37:21+00:00 Europe/London
   [Enhancements]
   - Added Plack::Middleware::Security::Common with some common

@@ -76,7 +76,7 @@ sub archive_extensions {
 
 =export cgi_bin
 
-This blocks requests that refer to the cgi-bin directory in the path
+This blocks requests that refer to the C<cgi-bin> directory in the path
 or query string, or a C<cgi_wrapper> script.
 
 =cut
