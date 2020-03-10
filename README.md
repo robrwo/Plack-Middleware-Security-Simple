@@ -31,6 +31,9 @@ This module provides a simple security filter for PSGI-based
 applications, so that you can filter out obvious exploit-seeking
 scripts.
 
+Note that as an alternative, you may want to consider using something like
+[modsecurity](https://modsecurity.org/) as a filter in a reverse proxy.
+
 # ATTRIBUTES
 
 ## rules
