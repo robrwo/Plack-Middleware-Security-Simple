@@ -77,12 +77,12 @@ sub archive_extensions {
 =export cgi_bin
 
 This blocks requests that refer to the cgi-bin directory in the path
-or query string.
+or query string, or a C<cgi_wrapper> script.
 
 =cut
 
 sub cgi_bin {
-    my $re = qr{/cgi-bin/};
+    my $re = qr{/cgi[_\-](bin|wrapper)};
     return (
         PATH_INFO    => $re,
         QUERY_STRING => $re,
