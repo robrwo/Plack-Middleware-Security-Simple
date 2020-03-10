@@ -8,6 +8,8 @@ Revision history for {{$dist->name}}:
 
   - Updated rule: cgi_bin to incldue cgi_wrapper.
 
+  - Updated rule: dot_files to include "../" in path or query string.
+
   [Documentation]
   - Fixed POD formatting.
 

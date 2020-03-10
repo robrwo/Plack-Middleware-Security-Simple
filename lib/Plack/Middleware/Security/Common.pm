@@ -91,14 +91,15 @@ sub cgi_bin {
 
 =export dot_files
 
-This blocks all requests that refer to dot-files, except for
+This blocks all requests that refer to dot-files or C<..>, except for
 the F</.well-known/> path.
 
 =cut
 
 sub dot_files {
     return (
-        PATH_INFO => qr{/\.(?!well-known/)},
+        PATH_INFO    => qr{(?:\.\./|/\.(?!well-known/))},
+        QUERY_STRING => qr{\.\./},
     );
 }
 
