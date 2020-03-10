@@ -12,6 +12,8 @@ Revision history for {{$dist->name}}:
 
   - The HTTP status can be overridden without overriding the handler.
 
+  - The log message includes the request method and HTTP status.
+
   [Documentation]
   - Fixed POD formatting.
 

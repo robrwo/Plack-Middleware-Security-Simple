@@ -92,14 +92,15 @@ sub prepare_app {
         $self->handler(
             sub {
                 my ($env) = @_;
+                my $status = $self->status;
                 if ( my $logger = $env->{'psgix.logger'} ) {
                     $logger->({
                         level   => "warn",
                         message => __PACKAGE__
-                          . " Blocked $env->{REMOTE_ADDR} $env->{REQUEST_URI}"
+                          . " Blocked $env->{REMOTE_ADDR} $env->{REQUEST_METHOD} $env->{REQUEST_URI} HTTP $status"
                     });
                 }
-            my $res = Plack::Response->new($self->status, [ 'Content-Type' => 'text/plain' ], [ "Bad Request" ] );
+            my $res = Plack::Response->new($status, [ 'Content-Type' => 'text/plain' ], [ "Bad Request" ] );
                 return $res->finalize;
 
             }
