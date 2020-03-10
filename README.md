@@ -56,6 +56,19 @@ It takes the Plack environment as an argument, and returns a
 The default handler will log a warning to the `psgix.logger`, and
 return a HTTP 400 (Bad Request) response.
 
+The message is of the form
+
+```
+Plack::Middleware::Security::Simple Blocked $ip $method $path_query HTTP $status
+```
+
+This can be used if you are writing [fail2ban](https://metacpan.org/pod/fail2ban) filters.
+
+## status
+
+This is the HTTP status code that the default ["handler"](#handler) will return
+when a resource is blocked.  It defaults to 400 (Bad Request).
+
 # SEE ALSO
 
 [Hash::Match](https://metacpan.org/pod/Hash::Match)
