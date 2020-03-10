@@ -66,6 +66,12 @@ L<Plack::Middleware::HTTPExceptions>.
 The default handler will log a warning to the C<psgix.logger>, and
 return a HTTP 400 (Bad Request) response.
 
+The message is of the form
+
+  Plack::Middleware::Security::Simple Blocked $ip $method $path_query HTTP $status
+
+This can be used if you are writing L<fail2ban> filters.
+
 =attr status
 
 This is the HTTP status code that the default L</handler> will return
