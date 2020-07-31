@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Toolchain]
+  - Add core modules in the prerequisites.
 
 v0.4.1    2020-03-11 12:19:20+00:00 Europe/London
   [Enhancements]
