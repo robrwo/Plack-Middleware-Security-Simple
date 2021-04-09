@@ -108,10 +108,13 @@ sub dot_files {
 This blocks requests with miscellenious extensions in the path or
 query string.
 
+This includes common extensions for backups, includes or configuration
+files.
+
 =cut
 
 sub misc_extensions {
-    my $re = qr{[.](?:bak|dat|inc)\b};
+    my $re = qr{[.](?:bak|cfg|conf|dat|inc|ini)\b};
     return (
         PATH_INFO    => $re,
         QUERY_STRING => $re,

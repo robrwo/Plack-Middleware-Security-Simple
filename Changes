@@ -4,6 +4,8 @@ Revision history for {{$dist->name}}:
   [Enhancements]
   - Add more file extensions to script_extensions rule.
 
+  - Add more extensions to the misc_extensions rule.
+
   [Documentation]
   - Bump copyright year.
 
