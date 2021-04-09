@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+
+v0.4.3    2021-04-09 16:39:01+01:00 Europe/London
   [Enhancements]
   - Add more file extensions to script_extensions rule.
 
