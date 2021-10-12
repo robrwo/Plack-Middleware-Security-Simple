@@ -94,6 +94,20 @@ test_psgi
         is $res->code, HTTP_BAD_REQUEST, "HTTP_BAD_REQUEST";
     };
 
+    subtest 'blocked' => sub {
+        my $req = POST "/config.ini";
+        my $res = $cb->($req);
+        ok is_error( $res->code ), join( " ", $req->method, $req->uri );
+        is $res->code, HTTP_BAD_REQUEST, "HTTP_BAD_REQUEST";
+    };
+
+    subtest 'blocked' => sub {
+        my $req = POST "/aws.yml";
+        my $res = $cb->($req);
+        ok is_error( $res->code ), join( " ", $req->method, $req->uri );
+        is $res->code, HTTP_BAD_REQUEST, "HTTP_BAD_REQUEST";
+    };
+
     subtest 'blocked get with content body' => sub {
         my $req = GET "/some/thing.html";
         $req->content("search=evil hidden payload");

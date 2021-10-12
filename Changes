@@ -1,6 +1,11 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Enhancements]
+  - Add .yml files to the misc_extensions rule.
+
+  [Tests]
+  - Add text cases.
 
 v0.4.4    2021-04-21 16:45:59+01:00 Europe/London
   [Enhancements]

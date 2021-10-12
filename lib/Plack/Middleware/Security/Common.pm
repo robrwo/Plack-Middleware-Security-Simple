@@ -114,7 +114,7 @@ files.
 =cut
 
 sub misc_extensions {
-    my $re = qr{[.](?:bak|cfg|conf|dat|inc|ini)\b};
+    my $re = qr{[.](?:bak|cfg|conf|dat|inc|ini|yml)\b};
     return (
         PATH_INFO    => $re,
         QUERY_STRING => $re,
