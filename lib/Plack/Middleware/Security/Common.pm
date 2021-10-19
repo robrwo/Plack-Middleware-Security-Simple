@@ -7,10 +7,13 @@ use warnings;
 
 use parent qw( Plack::Middleware::Security::Simple Exporter::Tiny );
 
+use Regexp::Common qw/ net /;
+
 our @EXPORT = qw(
    archive_extensions
    cgi_bin
    dot_files
+   ip_address_referer
    misc_extensions
    non_printable_chars
    null_or_escape
@@ -100,6 +103,21 @@ sub dot_files {
     return (
         PATH_INFO    => qr{(?:\.\./|/\.(?!well-known/))},
         QUERY_STRING => qr{\.\./},
+    );
+}
+
+=export ip_address_referer
+
+This blocks all requests where the HTTP referer is an IP4 or IP6
+address.
+
+=cut
+
+sub ip_address_referer {
+    my $re = qr{\.(?:iso|rar|tar|u?zip|[7g]?z)\b};
+    return (
+        HTTP_REFERER => qr{^https?://$RE{net}{IPv4}/},
+        HTTP_REFERER => qr{^https?://$RE{net}{IPv6}/},
     );
 }
 

@@ -18,6 +18,7 @@ my $handler = builder {
             archive_extensions,
             cgi_bin,
             dot_files,
+            ip_address_referer,
             non_printable_chars,
             null_or_escape,
             require_content,
@@ -35,6 +36,22 @@ test_psgi
   app    => $handler,
   client => sub {
     my $cb = shift;
+
+    subtest 'blocked IP4 referer' => sub {
+        my $req = GET "/";
+        $req->header( Referer => 'http://127.0.0.1/' );
+        my $res = $cb->($req);
+        ok is_error( $res->code ), join( " ", $req->method, $req->uri );
+        is $res->code, HTTP_BAD_REQUEST, "HTTP_BAD_REQUEST";
+    };
+
+    subtest 'blocked IP6 referer' => sub {
+        my $req = GET "/";
+        $req->header( Referer => 'https://2001:db8::2:1/' );
+        my $res = $cb->($req);
+        ok is_error( $res->code ), join( " ", $req->method, $req->uri );
+        is $res->code, HTTP_BAD_REQUEST, "HTTP_BAD_REQUEST";
+    };
 
     subtest 'not blocked' => sub {
         my $req = GET "/some/thing.html";

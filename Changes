@@ -6,6 +6,8 @@ Revision history for {{$dist->name}}:
 
   - Add .mv and .mvc to the script_extensions rule.
 
+  - Add ip_address_referer rule.
+
   [Tests]
   - Add text cases.
 

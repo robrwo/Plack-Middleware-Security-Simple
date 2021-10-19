@@ -8,6 +8,7 @@ requires "Plack::Middleware" => "0";
 requires "Plack::Response" => "0";
 requires "Plack::Util::Accessor" => "0";
 requires "Ref::Util" => "0";
+requires "Regexp::Common" => "0";
 requires "parent" => "0";
 requires "perl" => "v5.10.0";
 requires "strict" => "0";
