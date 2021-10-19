@@ -136,7 +136,6 @@ address.
 =cut
 
 sub ip_address_referer {
-    my $re = qr{\.(?:iso|rar|tar|u?zip|[7g]?z)\b};
     return (
         HTTP_REFERER => qr{^https?://$RE{net}{IPv4}/},
         HTTP_REFERER => qr{^https?://$RE{net}{IPv6}/},
