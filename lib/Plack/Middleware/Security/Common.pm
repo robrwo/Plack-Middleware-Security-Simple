@@ -60,6 +60,28 @@ past the PSGI layer.
 
 See L</EXPORTS> for a list of rules.
 
+You can create exceptions to the rules by adding qualifiers, for
+example, you want to block requests for archives, except in a
+F</downloads> folder, you could use something like
+
+  builder {
+
+    enable "Security::Common",
+        rules => [
+           -and => [
+                -notany => [ PATH_INFO => qr{^/downloads/} ],
+                -any    => [ archive_extensions ],
+            ],
+          ...
+        ];
+
+    ...
+
+  };
+
+Note that the rules return an array of matches, so when qualifying
+them you will need to put them in an array reference.
+
 =cut
 
 =export archive_extensions

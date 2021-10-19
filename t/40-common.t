@@ -10,12 +10,16 @@ use HTTP::Request::Common;
 use Plack::Builder;
 use Plack::Test;
 
+use Hash::Match;
 use Plack::Middleware::Security::Common;
 
 my $handler = builder {
     enable "Security::Common",
         rules => [
-            archive_extensions,
+           -and => [
+                -notany => [ PATH_INFO => qr{^/downloads/} ],
+                -any => [ archive_extensions ],
+            ],
             cgi_bin,
             dot_files,
             ip_address_referer,
@@ -95,6 +99,13 @@ test_psgi
         my $res = $cb->($req);
         ok is_error( $res->code ), join( " ", $req->method, $req->uri );
         is $res->code, HTTP_BAD_REQUEST, "HTTP_BAD_REQUEST";
+    };
+
+    subtest 'not blocked' => sub {
+        my $req = GET "/downloads/files.zip";
+        my $res = $cb->($req);
+        ok is_success( $res->code ), join( " ", $req->method, $req->uri );
+        is $res->code, HTTP_OK, "HTTP_OK";
     };
 
     subtest 'blocked' => sub {

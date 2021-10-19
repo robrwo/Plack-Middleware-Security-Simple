@@ -8,6 +8,9 @@ Revision history for {{$dist->name}}:
 
   - Add ip_address_referer rule.
 
+  [Documentation]
+  - Gave an example of adding an exception to a rule, GH#3.
+
   [Tests]
   - Add text cases.
 
