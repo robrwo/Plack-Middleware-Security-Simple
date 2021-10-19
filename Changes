@@ -4,6 +4,8 @@ Revision history for {{$dist->name}}:
   [Enhancements]
   - Add .yml files to the misc_extensions rule.
 
+  - Add .mv and .mvc to the script_extensions rule.
+
   [Tests]
   - Add text cases.
 
