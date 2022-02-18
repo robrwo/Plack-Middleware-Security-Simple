@@ -60,6 +60,9 @@ Most of these rules don't directly improve the security of your web
 application: they simply block common exploit scanners from getting
 past the PSGI layer.
 
+Note that they cannot block any exploits of proxies that are in front
+of your PSGI application.
+
 See L</EXPORTS> for a list of rules.
 
 You can create exceptions to the rules by adding qualifiers, for
