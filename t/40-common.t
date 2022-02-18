@@ -27,6 +27,7 @@ my $handler = builder {
             non_printable_chars,
             null_or_escape,
             require_content,
+            protocol_in_path_or_referer,
             script_extensions,
             system_dirs,
             unexpected_content,
@@ -193,6 +194,29 @@ test_psgi
         ok is_success( $res->code ), join( " ", $req->method, $req->uri );
         is $res->code, HTTP_OK, "HTTP_OK";
     };
+
+    subtest 'blocked' => sub {
+        my $req = GET q[/admin/${jndi:ldap://example.com/}];
+        my $res = $cb->($req);
+        ok is_error( $res->code ), join( " ", $req->method, $req->uri );
+        is $res->code, HTTP_BAD_REQUEST, "HTTP_BAD_REQUEST";
+    };
+
+    subtest 'blocked' => sub {
+        my $req = GET "/";
+        $req->header( Referer => q[${jndi:ldap://example.com/}] );
+        my $res = $cb->($req);
+        ok is_error( $res->code ), join( " ", $req->method, $req->uri );
+        is $res->code, HTTP_BAD_REQUEST, "HTTP_BAD_REQUEST";
+    };
+
+    subtest 'blocked' => sub {
+        my $req = GET q[?unix:|];
+        my $res = $cb->($req);
+        ok is_error( $res->code ), join( " ", $req->method, $req->uri );
+        is $res->code, HTTP_BAD_REQUEST, "HTTP_BAD_REQUEST";
+    };
+
 
  };
 

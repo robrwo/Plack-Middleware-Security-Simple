@@ -18,6 +18,7 @@ our @EXPORT = qw(
    misc_extensions
    non_printable_chars
    null_or_escape
+   protocol_in_path_or_referer
    require_content
    script_extensions
    system_dirs
@@ -197,6 +198,22 @@ sub null_or_escape {
     return (
         REQUEST_URI  => $re,
     )
+}
+
+=export protocol_in_path_or_referer
+
+This blocks requests that have non-web protocols like C<file>, C<dns>,
+C<jndi>, C<unix> or C<ldap> in the path, query string or referer.
+
+=cut
+
+sub protocol_in_path_or_referer {
+    my $re = qr{\b(?:file|dns|jndi|unix|ldap):};
+    return (
+        PATH_INFO    => $re,
+        QUERY_STRING => $re,
+        HTTP_REFERER => $re,
+    );
 }
 
 =export require_content

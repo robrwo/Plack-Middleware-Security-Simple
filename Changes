@@ -2,7 +2,7 @@ Revision history for {{$dist->name}}:
 
 {{$NEXT}}
   [Enhancements]
-  - Add fake_extensions rule.
+  - Add fake_extensions and protocol_in_path_or_referer rules.
 
   [Documentation]
   - Bump copyright year.
