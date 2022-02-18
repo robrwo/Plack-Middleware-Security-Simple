@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Documentation]
+  - Add version when newer rules were added.
 
 v0.6.0    2022-02-18 18:29:34+00:00 Europe/London
   [Documentation]

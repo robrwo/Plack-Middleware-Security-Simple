@@ -138,6 +138,8 @@ sub dot_files {
 This blocks requests with fake extensions, usually done with image extensions, e.g.
 F</some/path;.jpg>.
 
+Added in v0.5.1.
+
 =cut
 
 sub fake_extensions {
@@ -151,6 +153,8 @@ sub fake_extensions {
 
 This blocks all requests where the HTTP referer is an IP4 or IP6
 address.
+
+Added in v0.5.0.
 
 =cut
 
@@ -207,6 +211,8 @@ sub null_or_escape {
 
 This blocks requests that have non-web protocols like C<file>, C<dns>,
 C<jndi>, C<unix> or C<ldap> in the path, query string or referer.
+
+Added in v0.5.1.
 
 =cut
 
