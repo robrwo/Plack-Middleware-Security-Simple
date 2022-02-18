@@ -256,7 +256,7 @@ sub unexpected_content {
 
 =export webdav_methods
 
-This blocks requests using WebDAV-realted methods.
+This blocks requests using WebDAV-related methods.
 
 =cut
 
