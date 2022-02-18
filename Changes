@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Documentation]
+  - Fix typo in Plack::Middleware::Security::Common ABSTRACT!
 
 v0.5.1    2022-02-18 18:20:32+00:00 Europe/London
   [Enhancements]

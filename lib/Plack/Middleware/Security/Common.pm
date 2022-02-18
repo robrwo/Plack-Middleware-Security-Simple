@@ -1,6 +1,6 @@
 package Plack::Middleware::Security::Common;
 
-# ABSTRACT: A simple security filter for with common rules.
+# ABSTRACT: A simple security filter for Plack with common rules.
 
 use strict;
 use warnings;
