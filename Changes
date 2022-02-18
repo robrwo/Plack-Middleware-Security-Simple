@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Documentation]
+  - Bump copyright year.
 
 v0.5.0    2021-10-19 16:55:34+01:00 Europe/London
   [Enhancements]
