@@ -22,6 +22,7 @@ my $handler = builder {
             ],
             cgi_bin,
             dot_files,
+            fake_extensions,
             ip_address_referer,
             non_printable_chars,
             null_or_escape,
@@ -82,6 +83,13 @@ test_psgi
 
     subtest 'blocked' => sub {
         my $req = GET "/some/thing/?file=/etc/passwd";
+        my $res = $cb->($req);
+        ok is_error( $res->code ), join( " ", $req->method, $req->uri );
+        is $res->code, HTTP_BAD_REQUEST, "HTTP_BAD_REQUEST";
+    };
+
+    subtest 'blocked fake extension' => sub {
+        my $req = GET "/some/thing.ps;.jpg";
         my $res = $cb->($req);
         ok is_error( $res->code ), join( " ", $req->method, $req->uri );
         is $res->code, HTTP_BAD_REQUEST, "HTTP_BAD_REQUEST";

@@ -13,6 +13,7 @@ our @EXPORT = qw(
    archive_extensions
    cgi_bin
    dot_files
+   fake_extensions
    ip_address_referer
    misc_extensions
    non_printable_chars
@@ -126,6 +127,20 @@ sub dot_files {
         PATH_INFO    => qr{(?:\.\./|/\.(?!well-known/))},
         QUERY_STRING => qr{\.\./},
     );
+}
+
+=export fake_extensions
+
+This blocks requests with fake extensions, usually done with image extensions, e.g.
+F</some/path;.jpg>.
+
+=cut
+
+sub fake_extensions {
+    my $re = qr{;[.](?:\w+)\b};
+    return (
+        PATH_INFO    => $re,
+    )
 }
 
 =export ip_address_referer

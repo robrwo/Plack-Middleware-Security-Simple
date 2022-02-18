@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Enhancements]
+  - Add fake_extensions rule.
+
   [Documentation]
   - Bump copyright year.
 
