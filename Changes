@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Enhancements]
+  - Add .lz, .tgz and .xz to the archive_extensions rule.
+
   [Documentation]
   - Add version when newer rules were added.
 
