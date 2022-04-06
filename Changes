@@ -7,6 +7,8 @@ Revision history for {{$dist->name}}:
   [Documentation]
   - Add version when newer rules were added.
 
+  - Fix encoding of links in README.
+
   [Tests]
   - Test more blocked archive extensions.
 
