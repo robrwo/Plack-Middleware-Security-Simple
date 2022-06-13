@@ -28,7 +28,7 @@ our @EXPORT = qw(
    wordpress
 );
 
-our $VERSION = 'v0.6.2';
+our $VERSION = 'v0.7.0';
 
 =head1 SYNOPSIS
 
@@ -158,7 +158,7 @@ C<GET /%20HTTP/1.1%0d%0aX-Auth:%20accepted%0d%0a>.
 Any path with an HTTP protocol suffix or newline plus carriage return
 will be rejected.
 
-Added in v0.6.2.
+Added in v0.7.0.
 
 =cut
 
