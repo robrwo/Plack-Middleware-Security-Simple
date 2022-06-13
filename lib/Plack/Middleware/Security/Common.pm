@@ -14,6 +14,7 @@ our @EXPORT = qw(
    cgi_bin
    dot_files
    fake_extensions
+   header_injection
    ip_address_referer
    misc_extensions
    non_printable_chars
@@ -148,6 +149,26 @@ sub fake_extensions {
         PATH_INFO    => $re,
     )
 }
+
+=export header_injection
+
+This blocks requests that attept to inject a header in the response. e.g.
+C<GET /%20HTTP/1.1%0d%0aX-Auth:%20accepted%0d%0a>.
+
+Any path with an HTTP protocol suffix or newline plus carriage return
+will be rejected.
+
+Added in v0.6.2.
+
+=cut
+
+sub header_injection {
+    my $re = qr{(\%20HTTP/[0-9]|%0d%0a)}i;
+    return (
+        PATH_INFO    => $re,
+    );
+}
+
 
 =export ip_address_referer
 
