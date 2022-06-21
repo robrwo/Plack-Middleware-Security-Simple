@@ -114,7 +114,7 @@ or query string, or a C<cgi_wrapper> script.
 =cut
 
 sub cgi_bin {
-    my $re = qr{/cgi[_\-](bin|wrapper)};
+    my $re = qr{/cgi[_\-](?:bin|wrapper)};
     return (
         PATH_INFO    => $re,
         QUERY_STRING => $re,
@@ -180,7 +180,7 @@ Added in v0.7.0.
 =cut
 
 sub header_injection {
-    my $re = qr{(\%20HTTP/[0-9]|%0d%0a)}i;
+    my $re = qr{(?:\%20HTTP/[0-9]|%0d%0a)}i;
     return (
         PATH_INFO    => $re,
     );
