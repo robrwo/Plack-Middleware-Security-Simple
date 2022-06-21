@@ -29,7 +29,7 @@ our @EXPORT = qw(
    wordpress
 );
 
-our $VERSION = 'v0.7.1';
+our $VERSION = 'v0.8.0';
 
 =head1 SYNOPSIS
 
@@ -126,7 +126,7 @@ sub cgi_bin {
 This blocks requests that refer to directories with common CMS
 applications or libraries.
 
-Added in v0.7.1.
+Added in v0.8.0.
 
 =cut
 
