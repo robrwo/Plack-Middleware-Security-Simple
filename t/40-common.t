@@ -21,6 +21,7 @@ my $handler = builder {
                 -any => [ archive_extensions ],
             ],
             cgi_bin,
+            cms_prefixes,
             dot_files,
             fake_extensions,
             header_injection,

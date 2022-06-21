@@ -12,6 +12,7 @@ use Regexp::Common qw/ net /;
 our @EXPORT = qw(
    archive_extensions
    cgi_bin
+   cms_prefixes
    dot_files
    fake_extensions
    header_injection
@@ -117,6 +118,22 @@ sub cgi_bin {
     return (
         PATH_INFO    => $re,
         QUERY_STRING => $re,
+    );
+}
+
+=export cms_prefixes
+
+This blocks requests that refer to directories with common CMS
+applications or libraries.
+
+Added in v0.7.1.
+
+=cut
+
+sub cms_prefixes {
+    my $re = qr{/(?:laravel|lib|vendor|wp|yii|zend)};
+    return (
+        PATH_INFO    => $re,
     );
 }
 
