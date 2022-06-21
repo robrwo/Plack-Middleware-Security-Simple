@@ -131,7 +131,7 @@ Added in v0.7.1.
 =cut
 
 sub cms_prefixes {
-    my $re = qr{/(?:laravel|lib|vendor|wp|yii|zend)};
+    my $re = qr{/(?:drupal|include|joomla|laravel|lib|magento|plugin|plus|vendor|wordpress|wp|yii|zend)};
     return (
         PATH_INFO    => $re,
     );
