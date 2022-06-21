@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+
+v0.8.0    2022-06-21 16:36:30+01:00 Europe/London
   [Enhancements]
   - Added .bkp, .backup, .npb, .old, .psb and .psc to the misc_extensions rule.
 
