@@ -20,13 +20,13 @@ my $handler = builder {
                 -notany => [ PATH_INFO => qr{^/downloads/} ],
                 -any => [ archive_extensions ],
             ],
+            backup_files,
             cgi_bin,
             cms_prefixes,
             dot_files,
             fake_extensions,
             header_injection,
             ip_address_referer,
-            misc_extensions,
             non_printable_chars,
             null_or_escape,
             require_content,
@@ -187,6 +187,13 @@ test_psgi
 
     subtest 'blocked' => sub {
         my $req = POST "/aws.yml";
+        my $res = $cb->($req);
+        ok is_error( $res->code ), join( " ", $req->method, $req->uri );
+        is $res->code, HTTP_BAD_REQUEST, "HTTP_BAD_REQUEST";
+    };
+
+    subtest 'blocked' => sub {
+        my $req = GET "/example-com-backup.file";
         my $res = $cb->($req);
         ok is_error( $res->code ), join( " ", $req->method, $req->uri );
         is $res->code, HTTP_BAD_REQUEST, "HTTP_BAD_REQUEST";

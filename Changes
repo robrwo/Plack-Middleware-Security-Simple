@@ -6,6 +6,8 @@ Revision history for {{$dist->name}}:
 
   - Added cms_prefixes rule.
 
+  - Added backup_files rule.
+
   [Bug Fixes]
   - Disable capturing on some regexes.
 

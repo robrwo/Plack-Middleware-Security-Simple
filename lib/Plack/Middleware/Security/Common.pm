@@ -11,6 +11,7 @@ use Regexp::Common qw/ net /;
 
 our @EXPORT = qw(
    archive_extensions
+   backup_files
    cgi_bin
    cms_prefixes
    dot_files
@@ -103,6 +104,22 @@ sub archive_extensions {
     return (
         PATH_INFO    => $re,
         QUERY_STRING => $re,
+    );
+}
+
+=export backup_files
+
+This includes L</misc_extensions> plus filename suffixes associated
+with backup files, e.g. F<example.com-database.zip>.
+
+Added in v0.8.0.
+
+=cut
+
+sub backup_files {
+    return (
+        misc_extensions(),
+        PATH_INFO =>  qr{(?:backup|database|db|dump)\.},
     );
 }
 
@@ -208,8 +225,8 @@ sub ip_address_referer {
 This blocks requests with miscellenious extensions in the path or
 query string.
 
-This includes common extensions for backups, includes or configuration
-files.
+This includes common extensions and suffixes for backups, includes or
+configuration files.
 
 =cut
 
