@@ -171,7 +171,7 @@ test_psgi
         is $res->code, HTTP_BAD_REQUEST, "HTTP_BAD_REQUEST";
     };
 
-    subtest 'blocked' => sub {
+    subtest 'not blocked' => sub {
         my $req = GET "/example.ps";
         my $res = $cb->($req);
         ok is_success( $res->code ), join( " ", $req->method, $req->uri );
