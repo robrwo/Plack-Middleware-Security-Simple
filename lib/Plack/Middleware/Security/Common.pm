@@ -100,7 +100,7 @@ or query string.
 =cut
 
 sub archive_extensions {
-    my $re = qr{\.(?:iso|rar|tar|u?zip|[7glx]?z|tgz)\b};
+    my $re = qr{\.(?:bz2|iso|rar|tar|u?zip|[7glx]?z|tgz)\b};
     return (
         PATH_INFO    => $re,
         QUERY_STRING => $re,
