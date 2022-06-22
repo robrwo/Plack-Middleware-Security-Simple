@@ -4,6 +4,8 @@ Revision history for {{$dist->name}}:
   [Enhancements]
   - Added .bz2 to archive_extensions rule.
 
+  - Updated backup_files rule.
+
 v0.8.0    2022-06-21 16:36:30+01:00 Europe/London
   [Enhancements]
   - Added .bkp, .backup, .npb, .old, .psb and .psc to the misc_extensions rule.

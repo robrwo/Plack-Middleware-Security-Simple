@@ -119,7 +119,7 @@ Added in v0.8.0.
 sub backup_files {
     return (
         misc_extensions(),
-        PATH_INFO =>  qr{(?:backup|database|db|dump)\.},
+        PATH_INFO =>  qr{(?:backup|database|db|dump|localhost)\.},
     );
 }
 
