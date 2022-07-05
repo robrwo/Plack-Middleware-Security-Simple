@@ -315,13 +315,13 @@ sub script_extensions {
 
 =export system_dirs
 
-This blocks requests that refer to system directories in the path or
-query string.
+This blocks requests that refer to system or metadata directories in
+the path or query string.
 
 =cut
 
 sub system_dirs {
-    my $re = qr{/(?:s?bin|etc|usr|var|srv|opt)/};
+    my $re = qr{/(?:s?bin|etc|usr|var|srv|opt|__MACOSX|META-INF)/};
     return (
         PATH_INFO    => $re,
         QUERY_STRING => $re,
