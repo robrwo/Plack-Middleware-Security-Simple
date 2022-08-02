@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Documentation]
+  - Fixed typo in Changes.
 
 v0.8.1    2022-07-05 12:06:58+01:00 Europe/London
   [Enhancements]
@@ -8,7 +10,7 @@ v0.8.1    2022-07-05 12:06:58+01:00 Europe/London
 
   - Updated backup_files rule.
 
-  - Added Windows META-INF and OS/X __MAXOSX to system_dirs rule.
+  - Added Windows META-INF and OS/X __MACOSX to system_dirs rule.
 
   [Toolchain]
   - Sign release.
