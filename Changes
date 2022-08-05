@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Enhancements]
+  - Added .config to the misc_extensions rule.
+
   [Documentation]
   - Fixed typo in Changes.
 

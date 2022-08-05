@@ -231,7 +231,7 @@ configuration files.
 =cut
 
 sub misc_extensions {
-    my $re = qr{[.](?:backup|bak|bck|bkp|cfg|conf|dat|ibz|in[ci]|npb|old|ps[bc]|yml)\b};
+    my $re = qr{[.](?:backup|bak|bck|bkp|cfg|conf(?:ig)?|dat|ibz|in[ci]|npb|old|ps[bc]|yml)\b};
     return (
         PATH_INFO    => $re,
         QUERY_STRING => $re,
