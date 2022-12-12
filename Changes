@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Documentation]
+  - Added missing item to Changes for v0.8.2.
 
 v0.8.2    2022-12-12 16:40:09+00:00 Europe/London
   [Enhancements]
@@ -15,6 +17,9 @@ v0.8.2    2022-12-12 16:40:09+00:00 Europe/London
 
   [Tests]
   - Fix dependency for Test::Vars.
+
+  [Other]
+  - Added GitHub Actions to run tests.
 
 v0.8.1    2022-07-05 12:06:58+01:00 Europe/London
   [Enhancements]
