@@ -6,6 +6,8 @@ Revision history for {{$dist->name}}:
 
   - Added docroot, ftproot, webroot, inetpub to the cms_prefixes rule.
 
+  - Added adm to the system_dirs rule.
+
   [Documentation]
   - Fixed typo in Changes.
 

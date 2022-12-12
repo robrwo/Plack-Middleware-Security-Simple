@@ -321,7 +321,7 @@ the path or query string.
 =cut
 
 sub system_dirs {
-    my $re = qr{/(?:s?bin|etc|usr|var|srv|opt|__MACOSX|META-INF)/};
+    my $re = qr{/(?:s?adm|bin|etc|usr|var|srv|opt|__MACOSX|META-INF)/};
     return (
         PATH_INFO    => $re,
         QUERY_STRING => $re,
