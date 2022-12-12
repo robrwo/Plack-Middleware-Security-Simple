@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+
+v0.8.2    2022-12-12 16:40:09+00:00 Europe/London
   [Enhancements]
   - Added .config to the misc_extensions rule.
 
