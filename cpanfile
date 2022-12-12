@@ -25,6 +25,7 @@ on 'test' => sub {
   requires "Plack::Builder" => "0";
   requires "Plack::Test" => "0";
   requires "Test::More" => "0";
+  requires "Test::Vars" => "0.015";
 };
 
 on 'test' => sub {
@@ -49,5 +50,4 @@ on 'develop' => sub {
   requires "Test::Pod::LinkCheck" => "0";
   requires "Test::Portability::Files" => "0";
   requires "Test::TrailingSpace" => "0.0203";
-  requires "Test::Vars" => "0.015";
 };
