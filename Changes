@@ -4,6 +4,8 @@ Revision history for {{$dist->name}}:
   [Enhancements]
   - Added .config to the misc_extensions rule.
 
+  - Added docroot, ftproot, webroot, inetpub to the cms_prefixes rule.
+
   [Documentation]
   - Fixed typo in Changes.
 

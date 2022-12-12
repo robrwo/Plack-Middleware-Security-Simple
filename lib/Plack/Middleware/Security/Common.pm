@@ -141,14 +141,14 @@ sub cgi_bin {
 =export cms_prefixes
 
 This blocks requests that refer to directories with common CMS
-applications or libraries.
+applications, libraries, or web servers.
 
 Added in v0.8.0.
 
 =cut
 
 sub cms_prefixes {
-    my $re = qr{/(?:drupal|include|joomla|laravel|lib|magento|plugin|plus|vendor|wordpress|wp|yii|zend)};
+    my $re = qr{/(?:docroot|drupal|ftproot|include|inetpub|joomla|laravel|lib|magento|plugin|plus|vendor|webroot|wp|wordpress|yii|zend)};
     return (
         PATH_INFO    => $re,
     );
