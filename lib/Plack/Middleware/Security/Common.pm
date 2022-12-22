@@ -265,14 +265,14 @@ sub null_or_escape {
 =export protocol_in_path_or_referer
 
 This blocks requests that have non-web protocols like C<file>, C<dns>,
-C<jndi>, C<unix> or C<ldap> in the path, query string or referer.
+C<jndi>, C<unix>, C<ldap> or C<php> in the path, query string or referer.
 
 Added in v0.5.1.
 
 =cut
 
 sub protocol_in_path_or_referer {
-    my $re = qr{\b(?:file|dns|jndi|unix|ldap):};
+    my $re = qr{\b(?:file|dns|jndi|unix|ldap|php):};
     return (
         PATH_INFO    => $re,
         QUERY_STRING => $re,

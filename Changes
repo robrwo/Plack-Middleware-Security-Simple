@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Enhancements]
+  - Added php: to the protocol_in_path_or_referer rule.
+
   [Documentation]
   - Added missing item to Changes for v0.8.2.
 
