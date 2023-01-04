@@ -72,6 +72,14 @@ This can be used if you are writing [fail2ban](https://metacpan.org/pod/fail2ban
 This is the HTTP status code that the default ["handler"](#handler) will return
 when a resource is blocked.  It defaults to 400 (Bad Request).
 
+# SUPPORT FOR OLDER PERL VERSIONS
+
+Since v0.9.0, the this module requires Perl v5.14 or later.
+
+If you need this module on Perl v5.10, please use one of the v0.8.x
+versions of this module.  Significant bug or security fixes may be
+backported to those versions.
+
 # SEE ALSO
 
 [Hash::Match](https://metacpan.org/pod/Hash%3A%3AMatch)

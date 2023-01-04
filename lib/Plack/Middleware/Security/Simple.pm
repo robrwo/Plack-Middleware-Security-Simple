@@ -126,6 +126,14 @@ sub call {
     return $self->app->($env);
 }
 
+=head1 SUPPORT FOR OLDER PERL VERSIONS
+
+Since v0.9.0, the this module requires Perl v5.14 or later.
+
+If you need this module on Perl v5.10, please use one of the v0.8.x
+versions of this module.  Significant bug or security fixes may be
+backported to those versions.
+
 =head1 SEE ALSO
 
 L<Hash::Match>

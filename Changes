@@ -7,6 +7,8 @@ Revision history for {{$dist->name}}:
   [Documentation]
   - Bumped copyright year.
 
+  - Documented support for older Perl versions.
+
 v0.8.3    2022-12-22 14:03:34+00:00 Europe/London
   [Enhancements]
   - Added php: to the protocol_in_path_or_referer rule.
