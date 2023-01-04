@@ -2,7 +2,7 @@ Revision history for {{$dist->name}}:
 
 {{$NEXT}}
   [Incompatible Changes]
-  - Minimum Perl version is v5.12, due to the minimum version of many prerequisites increasing.
+  - Minimum Perl version is v5.14.
 
   [Documentation]
   - Bumped copyright year.
