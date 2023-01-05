@@ -4,7 +4,6 @@ package Plack::Middleware::Security::Simple;
 
 use v5.14;
 
-use strict;
 use warnings;
 
 use parent qw( Plack::Middleware );

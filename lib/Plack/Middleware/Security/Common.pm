@@ -2,7 +2,8 @@ package Plack::Middleware::Security::Common;
 
 # ABSTRACT: A simple security filter for Plack with common rules.
 
-use strict;
+use v5.14;
+
 use warnings;
 
 use parent qw( Plack::Middleware::Security::Simple Exporter::Tiny );
