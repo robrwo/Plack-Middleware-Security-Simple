@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  No changes since v0.9.0.
 
 v0.9.0    2023-01-05 09:27:11+00:00 Europe/London (TRIAL RELEASE)
   [Incompatible Changes]
