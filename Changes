@@ -4,6 +4,8 @@ Revision history for {{$dist->name}}:
   [Exhancements]
   - Added document_extensions rule.
 
+  - Added .rdg, .tml and .toml to the misc_extensions rule.
+
 v0.9.1    2023-01-10 10:55:57+00:00 Europe/London
   No changes since v0.9.0.
 
