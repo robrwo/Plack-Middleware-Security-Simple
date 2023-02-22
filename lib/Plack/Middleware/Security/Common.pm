@@ -330,7 +330,7 @@ that refer to these scripts in the query string.
 =cut
 
 sub script_extensions {
-    my $re = qr{[.](?:as[hp]x?|axd|bat|cfm|cgi|com|dll|do|exe|jspa?|lua|mvc?|php5?|p[lm]|ps[dm]?[1h]|sht?|shtml|sql)\b};
+    my $re = qr{[.](?:as[hp]x?|axd|bat|cfm|cgi|com|csc|dll|do|exe|jspa?|lua|mvc?|php5?|p[lm]|ps[dm]?[1h]|sht?|shtml|sql)\b};
     return (
         PATH_INFO    => $re,
         QUERY_STRING => $re,
