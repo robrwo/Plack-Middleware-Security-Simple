@@ -4,6 +4,9 @@ Revision history for {{$dist->name}}:
   [Exhancements]
   - Added .c and .cc to the script_extensions rule.
 
+  [Documentation]
+  - Fixed typos in POD.
+
 v0.10.0   2023-02-22 10:56:42+00:00 Europe/London
   [Exhancements]
   - Added document_extensions rule.

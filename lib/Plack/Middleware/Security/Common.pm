@@ -323,7 +323,7 @@ sub require_content {
 
 =export script_extensions
 
-This blocks requests that refer to actual scripts, file file
+This blocks requests that refer to actual scripts or source code file
 extension, such as C<.php> or C<.asp>.  It will also block requests
 that refer to these scripts in the query string.
 
