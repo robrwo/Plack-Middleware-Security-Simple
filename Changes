@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+
+v0.10.1   2023-05-06 11:18:22+01:00 Europe/London
   [Exhancements]
   - Added .c and .cc to the script_extensions rule.
 
