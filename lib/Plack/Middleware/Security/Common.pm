@@ -17,6 +17,7 @@ our @EXPORT = qw(
    cms_prefixes
    document_extensions
    dot_files
+   exchange_prefixes
    fake_extensions
    header_injection
    ip_address_referer
@@ -190,6 +191,18 @@ sub dot_files {
         PATH_INFO    => qr{(?:\.\./|/\.(?!well-known/))},
         QUERY_STRING => qr{\.\./},
     );
+}
+
+=export exchange_prefixes
+
+This blocks paths associated with Exchange servers.
+
+=cut
+
+sub exchange_prefixes {
+    return (
+        PATH_INFO => qr{^/+(?:ecp|owa|autodiscover)/}i,
+    )
 }
 
 =export fake_extensions

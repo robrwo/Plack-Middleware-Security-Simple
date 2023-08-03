@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Exhancements]
+  - Added the exchange_prefixes rule.
+
   [Documentation]
   - Support policy for older Perls is documented.
 
