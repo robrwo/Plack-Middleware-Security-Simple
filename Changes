@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Tests]
+  - Migrated to Test2.
 
 v0.11.0   2023-08-03 17:29:24+01:00 Europe/London
   [Exhancements]
