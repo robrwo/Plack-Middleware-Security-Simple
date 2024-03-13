@@ -27,6 +27,7 @@ our @EXPORT = qw(
    protocol_in_path_or_referer
    require_content
    script_extensions
+   script_injection
    system_dirs
    unexpected_content
    webdav_methods
@@ -348,6 +349,20 @@ sub script_extensions {
         PATH_INFO    => $re,
         QUERY_STRING => $re,
     )
+}
+
+=export script_injection
+
+This block requests that inject scripts using data-URLs.
+
+=cut
+
+sub script_injection {
+    my $re = qr{data:(?:application|text)/(?:x-)?(?:javascript|wasm);};
+    return (
+        PATH_INFO    => $re,
+        QUERY_STRING => $re,
+    );
 }
 
 =export system_dirs
