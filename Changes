@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+
+v0.12.0   2024-03-13 17:03:24+00:00 Europe/London
   [Exhancements]
   - Added the script_injection rule.
 
