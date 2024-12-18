@@ -4,6 +4,8 @@ Revision history for {{$dist->name}}:
   [Documentation]
   - Add a security policy.
 
+  - Updated the Perl version support policy.
+
   [Tests]
   - Switched package used for the release manifest.
 
