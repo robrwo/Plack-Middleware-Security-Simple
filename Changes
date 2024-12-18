@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Documentation]
+  - Add a security policy.
+
   [Tests]
   - Switched package used for the release manifest.
 
