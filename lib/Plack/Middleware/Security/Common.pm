@@ -427,6 +427,11 @@ sub wordpress {
 
 Suggestions for new rules or improving the existing rules are welcome.
 
+=head2 Reporting Security Vulnerabilities
+
+Security issues should not be reported on the bugtracker website. Please see F<SECURITY.md> for instructions how to
+report security vulnerabilities
+
 =cut
 
 1;
