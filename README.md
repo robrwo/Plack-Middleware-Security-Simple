@@ -4,7 +4,7 @@ Plack::Middleware::Security::Simple - A simple security filter for Plack
 
 # VERSION
 
-version v0.12.1
+version v0.12.2
 
 # SYNOPSIS
 

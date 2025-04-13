@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+
+v0.12.1   2025-04-13 14:01:21+01:00 Europe/London
   [Documentation]
   - Added a security policy.
 

@@ -34,7 +34,7 @@ our @EXPORT = qw(
    wordpress
 );
 
-our $VERSION = 'v0.12.1';
+our $VERSION = 'v0.12.2';
 
 =head1 SYNOPSIS
 
