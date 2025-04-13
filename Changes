@@ -2,7 +2,7 @@ Revision history for {{$dist->name}}:
 
 {{$NEXT}}
   [Documentation]
-  - Add a security policy.
+  - Added a security policy.
 
   - Updated the Perl version support policy.
 
