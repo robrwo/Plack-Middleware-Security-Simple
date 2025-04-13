@@ -6,6 +6,8 @@ Revision history for {{$dist->name}}:
 
   - Updated the Perl version support policy.
 
+  - Updated the copygiht year.
+
   [Tests]
   - Switched package used for the release manifest.
 
