@@ -48,7 +48,7 @@ generated files are kept in the repository as a convenience
 
 Generally, **you do not need Dist::Zilla to contribute patches**.  You do need
 Dist::Zilla to create a tarball.
-See [Installing and using Dist::Zilla](#installing-and-using-dist::zilla) below
+See [Installing and using Dist::Zilla](#installing-and-using-distzilla) below
 for guidance.
 
 ### Getting dependencies
