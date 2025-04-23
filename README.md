@@ -103,7 +103,7 @@ feature.
 ## Reporting Security Vulnerabilities
 
 Security issues should not be reported on the bugtracker website. Please see `SECURITY.md` for instructions how to
-report security vulnerabilities
+report security vulnerabilities.
 
 # AUTHOR
 
