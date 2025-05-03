@@ -4,6 +4,8 @@ Revision history for {{$dist->name}}:
   [Documentation]
   - Added a How to Contribute document.
 
+  - Updated the security policy.
+
   - Fixed minor typos.
 
 v0.12.1   2025-04-13 14:01:21+01:00 Europe/London
