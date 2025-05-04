@@ -4,6 +4,9 @@ Report security issues using https://github.com/robrwo/Plack-Middleware-Security
 
 This is the Security Policy for Plack-Middleware-Security-Simple.
 
+The latest version of the Security Policy can be found in the
+[git repository for Plack-Middleware-Security-Simple](https://github.com/robrwo/Plack-Middleware-Security-Simple/).
+
 This text is based on the CPAN Security Group's Guidelines for Adding
 a Security Policy to Perl Distributions (version 1.3.0)
 https://security.metacpan.org/docs/guides/security-policy-for-authors.html
