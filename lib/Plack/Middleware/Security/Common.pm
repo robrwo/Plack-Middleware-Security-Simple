@@ -166,7 +166,7 @@ This blocks various package and configuration scripts.
 =cut
 
 sub config_scripts {
-    my $re = qr{/(?:Dockerfile|Docker[ ]Images|alienfile|composer\.(?:json|xml)|config(?:uration)?|cpanfile|local\.(?:json|xml)|package\.(?:json|xml)|settings|storage)};
+    my $re = qr{/(?:Dockerfile|alienfile|composer\.json|config(?:uration)?|cpanfile|local\.(?:json|xml)|package\.(?:json|xml)|settings|storage)};
     return (
         PATH_INFO    => $re,
     );
