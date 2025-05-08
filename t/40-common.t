@@ -23,6 +23,7 @@ my $handler = builder {
             backup_files,
             cgi_bin,
             cms_prefixes,
+            config_scripts,
             document_extensions,
             dot_files,
             exchange_prefixes,
@@ -379,6 +380,30 @@ test_psgi
         ok is_error( $res->code ), join( " ", $req->method, $req->uri );
         is $res->code, HTTP_BAD_REQUEST, "HTTP_BAD_REQUEST";
     };
+
+    for my $path (
+        "Dockerfile",    "alienfile",     "cpanfile",    "composer.json",
+        "config",        "configuration", "config.json", "local.json",
+        "local.xml",     "package.json",  "package.xml", "settings.xml",
+        "settings.json", "settings.txt",  "storage/framework/cache"
+      )
+    {
+
+        subtest "blocked ${path}" => sub {
+            my $req = GET "/${path}";
+            my $res = $cb->($req);
+            ok is_error( $res->code ), join( " ", $req->method, $req->uri );
+            is $res->code, HTTP_BAD_REQUEST, "HTTP_BAD_REQUEST";
+        };
+
+        subtest "blocked /thing/${path}" => sub {
+            my $req = GET "/thing/${path}";
+            my $res = $cb->($req);
+            ok is_error( $res->code ), join( " ", $req->method, $req->uri );
+            is $res->code, HTTP_BAD_REQUEST, "HTTP_BAD_REQUEST";
+        };
+
+    }
 
  };
 
