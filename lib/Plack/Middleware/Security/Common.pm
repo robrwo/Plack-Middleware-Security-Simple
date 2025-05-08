@@ -15,6 +15,7 @@ our @EXPORT = qw(
    backup_files
    cgi_bin
    cms_prefixes
+   config_scripts
    document_extensions
    dot_files
    exchange_prefixes
@@ -153,6 +154,19 @@ Added in v0.8.0.
 
 sub cms_prefixes {
     my $re = qr{/(?:docroot|drupal|ftproot|include|inetpub|joomla|laravel|lib|magento|plugin|plus|swagger|vendor|webroot|wp|wordpress|yii|zend)};
+    return (
+        PATH_INFO    => $re,
+    );
+}
+
+=export config_scripts
+
+This blocks various package and configuration scripts.
+
+=cut
+
+sub config_scripts {
+    my $re = qr{/(?:Dockerfile|Docker[ ]Images|alienfile|composer\.(?:json|xml)|config(?:uration)?|cpanfile|local\.(?:json|xml)|package\.(?:json|xml)|settings|storage)};
     return (
         PATH_INFO    => $re,
     );

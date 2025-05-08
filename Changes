@@ -7,6 +7,8 @@ Revision history for {{$dist->name}}:
 
   - Added Swagger files to the cms_prefixes rule.
 
+  - Added the config_scripts rule.
+
   [Documentation]
   - Added a How to Contribute document.
 
