@@ -381,11 +381,13 @@ test_psgi
         is $res->code, HTTP_BAD_REQUEST, "HTTP_BAD_REQUEST";
     };
 
+## Please see file perltidy.ERR
     for my $path (
         "Dockerfile",    "alienfile",     "cpanfile",    "composer.json",
         "config",        "configuration", "config.json", "local.json",
         "local.xml",     "package.json",  "package.xml", "settings.xml",
-        "settings.json", "settings.txt",  "storage/framework/cache"
+        "settings.json", "settings.txt",  "storage/framework/cache",
+        "twilio.txt", "twilio.json", "twilio.xml", "sendgrid.json", "robomongo.json", "deployment-config.json", "live_env"
       )
     {
 

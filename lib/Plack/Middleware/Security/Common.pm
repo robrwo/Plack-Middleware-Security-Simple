@@ -166,10 +166,9 @@ This blocks various package and configuration scripts.
 =cut
 
 sub config_scripts {
-    my $re = qr{/(?:Dockerfile|alienfile|composer\.json|config(?:uration)?|cpanfile|local\.(?:json|xml)|package\.(?:json|xml)|settings|storage)};
-    return (
-        PATH_INFO    => $re,
-    );
+    my $re =
+qr{/(?:Dockerfile|alienfile|composer\.json|config(?:uration)?|cpanfile|deployment-config|live_env|local\.(?:json|xml)|package\.(?:json|xml)|robomongo|sendgrid|settings|storage|twilio)};
+    return ( PATH_INFO => $re, );
 }
 
 =export document_extensions
