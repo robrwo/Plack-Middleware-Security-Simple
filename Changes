@@ -5,6 +5,8 @@ Revision history for {{$dist->name}}:
   - The misc_extensions rule now blocks .dist, .env, .lck, .lock,
     .sav, .save, .swp, .swap, .tmp, .temp, and .yaml files.
 
+  - Added Swagger files to the cms_prefixes rule.
+
   [Documentation]
   - Added a How to Contribute document.
 

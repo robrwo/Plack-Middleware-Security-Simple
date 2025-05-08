@@ -152,7 +152,7 @@ Added in v0.8.0.
 =cut
 
 sub cms_prefixes {
-    my $re = qr{/(?:docroot|drupal|ftproot|include|inetpub|joomla|laravel|lib|magento|plugin|plus|vendor|webroot|wp|wordpress|yii|zend)};
+    my $re = qr{/(?:docroot|drupal|ftproot|include|inetpub|joomla|laravel|lib|magento|plugin|plus|swagger|vendor|webroot|wp|wordpress|yii|zend)};
     return (
         PATH_INFO    => $re,
     );
