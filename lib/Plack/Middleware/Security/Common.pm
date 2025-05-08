@@ -263,13 +263,13 @@ sub ip_address_referer {
 This blocks requests with miscellenious extensions in the path or
 query string.
 
-This includes common extensions and suffixes for backups, includes or
-configuration files.
+This includes common extensions and suffixes for backups, includes,
+configuration files, or temporary files.
 
 =cut
 
 sub misc_extensions {
-    my $re = qr{[.](?:backup|bak|bck|bkp|cfg|conf(?:ig)?|dat|ibz|in[ci]|npb|old|ps[bc]|rdg|to?ml|yml)\b};
+    my $re = qr{[.](?:backup|bak|bck|bkp|cfg|conf(?:ig)?|dat|dist|env|ibz|in[ci]|lo?ck|npb|old|ps[bc]|rdg|save?|swa?p|te?mp|to?ml|ya?ml)\b};
     return (
         PATH_INFO    => $re,
         QUERY_STRING => $re,

@@ -1,6 +1,10 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Enhancements]
+  - The misc_extensions rule now blocks .dist, .env, .lck, .lock,
+    .sav, .save, .swp, .swap, .tmp, .temp, and .yaml files.
+
   [Documentation]
   - Added a How to Contribute document.
 
