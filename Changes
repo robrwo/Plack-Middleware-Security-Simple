@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Enhancements]
+  - Added a misc_vulns rule.
+
   [Tests]
   - Added more author tests.
 

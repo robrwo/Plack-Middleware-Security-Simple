@@ -23,6 +23,7 @@ our @EXPORT = qw(
    header_injection
    ip_address_referer
    misc_extensions
+   misc_vulns
    non_printable_chars
    null_or_escape
    protocol_in_path_or_referer
@@ -287,6 +288,18 @@ sub misc_extensions {
         PATH_INFO    => $re,
         QUERY_STRING => $re,
     )
+}
+
+
+=export misc_vulns
+
+Block miscellaneous vulnerabilities.
+
+=cut
+
+sub misc_vulns {
+    my $re = qr{^/(?:shell)};
+    return ( PATH_INFO => $re, );
 }
 
 =export non_printable_chars

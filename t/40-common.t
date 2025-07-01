@@ -30,6 +30,7 @@ my $handler = builder {
             fake_extensions,
             header_injection,
             ip_address_referer,
+            misc_vulns,
             non_printable_chars,
             null_or_escape,
             require_content,
@@ -405,6 +406,13 @@ test_psgi
         };
 
     }
+
+    subtest 'blocked misc_vulns' => sub {
+        my $req = GET "/shellcode_pls.woff?_=0";
+        my $res = $cb->($req);
+        ok is_error( $res->code ), join( " ", $req->method, $req->uri );
+        is $res->code, HTTP_BAD_REQUEST, "HTTP_BAD_REQUEST";
+    };
 
  };
 
