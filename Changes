@@ -12,8 +12,10 @@ Revision history for {{$dist->name}}:
 
   - Updated copyright year.
 
+  - Added doap.xml.
+
   [Tests]
-  - Added more author tests.
+  - Added more author tests, and moved them into the xt directory.
 
   [Toolchain]
   - Stopped signing distributions with Module::Signature (which is deprecated)
