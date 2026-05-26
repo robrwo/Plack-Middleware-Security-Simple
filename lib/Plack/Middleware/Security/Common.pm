@@ -38,6 +38,12 @@ our @EXPORT = qw(
 
 our $VERSION = 'v0.13.1';
 
+=begin :prelude
+
+=for stopwords CMS WebDAV misspelt wordpress
+
+=end :prelude
+
 =head1 SYNOPSIS
 
   use Plack::Builder;
@@ -238,7 +244,7 @@ sub fake_extensions {
 
 =export header_injection
 
-This blocks requests that attept to inject a header in the response. e.g.
+This blocks requests that attempt to inject a header in the response. e.g.
 C<GET /%20HTTP/1.1%0d%0aX-Auth:%20accepted%0d%0a>.
 
 Any path with an HTTP protocol suffix or newline plus carriage return
@@ -259,10 +265,12 @@ sub header_injection {
 
 =export ip_address_referer
 
-This blocks all requests where the HTTP referer is an IP4 or IP6
+This blocks all requests where the HTTP referrer is an IP4 or IP6
 address.
 
 Added in v0.5.0.
+
+Note: the method is misspelt for consistency with the HTTP Header.
 
 =cut
 
@@ -275,7 +283,7 @@ sub ip_address_referer {
 
 =export misc_extensions
 
-This blocks requests with miscellenious extensions in the path or
+This blocks requests with miscellaneous extensions in the path or
 query string.
 
 This includes common extensions and suffixes for backups, includes,
@@ -315,7 +323,7 @@ sub non_printable_chars {
 
 =export null_or_escape
 
-This blocks requests with nulls or escape chatacters in the path or
+This blocks requests with nulls or escape characters in the path or
 query string.
 
 =cut
@@ -330,7 +338,7 @@ sub null_or_escape {
 =export protocol_in_path_or_referer
 
 This blocks requests that have non-web protocols like C<file>, C<dns>,
-C<jndi>, C<unix>, C<ldap> or C<php> in the path, query string or referer.
+C<jndi>, C<unix>, C<ldap> or C<php> in the path, query string or referrer.
 
 Added in v0.5.1.
 

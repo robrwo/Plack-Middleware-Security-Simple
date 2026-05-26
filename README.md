@@ -43,6 +43,7 @@ Changes for version v0.13.1 (2026-05-26)
     - Updated copyright year.
     - Added doap.xml.
     - Fixed broken links in POD.
+    - Fixed typos in POD.
 - Tests
     - Added more author tests, and moved them into the xt directory.
 - Toolchain

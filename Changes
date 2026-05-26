@@ -16,6 +16,8 @@ Revision history for {{$dist->name}}:
 
   - Fixed broken links in POD.
 
+  - Fixed typos in POD.
+
   [Tests]
   - Added more author tests, and moved them into the xt directory.
 
