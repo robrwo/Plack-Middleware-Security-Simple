@@ -28,7 +28,7 @@ applications, so that you can filter out obvious exploit-seeking
 scripts.
 
 Note that as an alternative, you may want to consider using something like
-[modsecurity](https://modsecurity.org/) as a filter in a reverse proxy.
+[https://modsecurity.org|modsecurity](https://modsecurity.org|modsecurity) as a filter in a reverse proxy.
 
 # RECENT CHANGES
 
@@ -42,6 +42,7 @@ Changes for version v0.13.1 (2026-05-26)
     - Updated author email address.
     - Updated copyright year.
     - Added doap.xml.
+    - Fixed broken links in POD.
 - Tests
     - Added more author tests, and moved them into the xt directory.
 - Toolchain

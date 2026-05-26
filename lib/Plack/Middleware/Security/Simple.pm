@@ -43,7 +43,7 @@ applications, so that you can filter out obvious exploit-seeking
 scripts.
 
 Note that as an alternative, you may want to consider using something like
-L<modsecurity|https://modsecurity.org/> as a filter in a reverse proxy.
+L<https://modsecurity.org|modsecurity> as a filter in a reverse proxy.
 
 =attr rules
 
@@ -72,7 +72,7 @@ The message is of the form
 
   Plack::Middleware::Security::Simple Blocked $ip $method $path_query HTTP $status
 
-This can be used if you are writing L<fail2ban> filters.
+This can be used if you are writing L<https://github.com/fail2ban/fail2ban|fail2ban> filters.
 
 =attr status
 
