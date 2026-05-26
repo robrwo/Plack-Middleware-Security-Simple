@@ -89,7 +89,7 @@ Future releases may only support Perl versions released in the last ten (10) yea
 # SOURCE
 
 The development version is on github at [https://github.com/robrwo/Plack-Middleware-Security-Simple](https://github.com/robrwo/Plack-Middleware-Security-Simple)
-and may be cloned from [git://github.com/robrwo/Plack-Middleware-Security-Simple.git](git://github.com/robrwo/Plack-Middleware-Security-Simple.git)
+and may be cloned from [https://github.com/robrwo/Plack-Middleware-Security-Simple.git](https://github.com/robrwo/Plack-Middleware-Security-Simple.git)
 
 # BUGS
 
