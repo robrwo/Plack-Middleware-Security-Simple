@@ -13,6 +13,9 @@ Revision history for {{$dist->name}}:
   [Tests]
   - Added more author tests.
 
+  [Toolchain]
+  - Stopped signing distributions with Module::Signature (which is deprecated)
+
 v0.13.0   2025-05-09 18:22:33+01:00 Europe/London
   [Enhancements]
   - The misc_extensions rule now blocks .dist, .env, .lck, .lock,
