@@ -10,6 +10,8 @@ Revision history for {{$dist->name}}:
   [Documentation]
   - Updated author email address.
 
+  - Updated copyright year.
+
   [Tests]
   - Added more author tests.
 
