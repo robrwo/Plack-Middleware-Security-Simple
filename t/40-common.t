@@ -319,6 +319,13 @@ test_psgi
         is $res->code, HTTP_BAD_REQUEST, "HTTP_BAD_REQUEST";
     };
 
+    subtest 'blocked header injection' => sub {
+        my $req = GET qq[/\r\n Host: example.com\r\n];
+        my $res = $cb->($req);
+        ok is_error( $res->code ), join( " ", $req->method, $req->uri );
+        is $res->code, HTTP_BAD_REQUEST, "HTTP_BAD_REQUEST";
+    };
+
     subtest 'blocked' => sub {
         my $req = GET "/__MACOSX/.git/config?fcbz=1";
         my $res = $cb->($req);

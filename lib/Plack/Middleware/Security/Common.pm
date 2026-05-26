@@ -249,8 +249,9 @@ Added in v0.7.0.
 =cut
 
 sub header_injection {
-    my $re = qr{(?:\%20HTTP/[0-9]|%0d%0a)}i;
+    my $re = qr{(?:\%20HTTP/[0-9]|%0[ad]|[\r\n])}i;
     return (
+        REQUEST_URI  => $re,
         PATH_INFO    => $re,
     );
 }

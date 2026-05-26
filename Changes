@@ -1,6 +1,9 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+  [Security]
+  - Fixed the header_injection rule CVE-2026-9658.
+
   [Enhancements]
   - Added a misc_vulns rule.
 
