@@ -7,6 +7,9 @@ Revision history for {{$dist->name}}:
   [Enhancements]
   - Added a misc_vulns rule.
 
+  [Documentation]
+  - Updated author email address.
+
   [Tests]
   - Added more author tests.
 
