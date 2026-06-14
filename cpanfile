@@ -15,8 +15,8 @@ requires "warnings" => "0";
 recommends "Ref::Util::XS" => "0";
 
 on 'build' => sub {
-  requires "ExtUtils::MakeMaker" => "7.22";
-  requires "Module::Metadata" => "1.000015";
+  recommends "ExtUtils::MakeMaker" => "7.22";
+  recommends "Module::Metadata" => "1.000015";
 };
 
 on 'test' => sub {
@@ -27,7 +27,7 @@ on 'test' => sub {
   requires "IPC::Open3" => "0";
   requires "Log::Dispatch" => "2.68";
   requires "Log::Dispatch::Array" => "0";
-  requires "Module::Metadata" => "1.000015";
+  requires "Module::Metadata" => "0";
   requires "Plack::Builder" => "0";
   requires "Plack::Test" => "0";
   requires "Test2::V0" => "0";

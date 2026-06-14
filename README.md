@@ -36,6 +36,8 @@ Changes for version v0.13.2 (2026-06-14)
 
 - Toolchain
     - Add automation policy.
+    - Set the static install flag.
+    - Adjusted build prerequisites to be recommended instead of required.
 
 See the `Changes` file for more details.
 
