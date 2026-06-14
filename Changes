@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}:
 
 {{$NEXT}}
+
+v0.13.2   2026-06-14 10:16:01+01:00 Europe/London
   [Toolchain]
   - Add automation policy.
 

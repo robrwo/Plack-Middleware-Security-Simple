@@ -36,7 +36,7 @@ our @EXPORT = qw(
    wordpress
 );
 
-our $VERSION = 'v0.13.2';
+our $VERSION = 'v0.13.3';
 
 =begin :prelude
 
